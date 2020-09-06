@@ -68,6 +68,12 @@ export default class RegisterForm extends React.Component{
 				this.setState({
 					loginDone:true
 				})
+			else{
+				this.setState({
+					loginError:true,
+					loginDone:false
+				})
+			}
 		})
 	}
 	responseGoogle(val){

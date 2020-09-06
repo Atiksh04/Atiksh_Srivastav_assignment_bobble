@@ -2,7 +2,6 @@ import React from 'react'
 import {Eye,EyeSlash} from 'bootstrap-icons-react'
 import {css} from "@emotion/core"
 import MoonLoader from "react-spinners/MoonLoader"
-//import {GoogleLogin} from 'react-google-login'
 
 
 export default class RegisterForm extends React.Component{
@@ -76,14 +75,7 @@ export default class RegisterForm extends React.Component{
 			}
 		})
 	}
-	responseGoogle(val){
-				console.log('f called')
-		this.setState({loginDone:true,loginError:false})
-	}
-	responseGoogleFail(val){
-		console.log('f called')
-		this.setState({loginError:true,loginDone:false})
-	}
+	
 	render(){
 		const override = css`
 		  display: block;
@@ -97,6 +89,7 @@ export default class RegisterForm extends React.Component{
 				<p className="big-text mt-2">Create your account</p>
 				<p className="normal-text mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
 				<div className="mb-1">
+					<button onClick={this.fb.bind(this)}>login</button>
 						<div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
 				</div>
 				<p className="top-line"><span>or</span></p>

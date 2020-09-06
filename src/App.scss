@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+$base-color:white;
+$text-color:black;
+$border-color:#e6e6e6;
+$blue:#0275d8;
+$blue-btn:#5bc0de;
+@font-face{
+  font-family: 'Kumbh';
+  src:url('./KumbhSans-Regular.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.register-component{
+  width:100%;
+  background-color: $base-color;
+  color:$text-color;
+  font-family: 'Kumbh';
+  height:100%;
+  .brand-logo{
+    width:100%;
+    height:auto;
+    box-shadow: 0 4px 5px -5px black;
+    .logo{
+      margin:auto;
+    }
+  }
+  .register-form{
+    border:1px solid $border-color;
+    width:45vw;
+    margin:auto;
+    text-align:center;
+    .normal-text{
+      font-size: 15px;
+      .blue-text{
+        color:$blue;
+      }
+    }
+    .big-text{
+      font-size:25px;
+    }
+    .top-line{
+      width:100%;
+      text-align:center;
+      border-bottom: 1px solid $border-color;
+      line-height:0.1em;
+      margin:10px 0 20px; 
+      span{
+        background-color:$base-color;
+        padding:0px 5px;
+      }
+    }
+    .form-group{
+      .signup-button{
+        width:100%;
+        background-color:$blue-btn;
+        color:white;
+      }
+      .form-control:focus{
+        outline: none !important;
+      }
+      .input-div{
+        display: inline-flex;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        width:100%;
+        height: calc(1.5em + 0.75rem + 2px);
+        
+        .input-password{
+          padding-left: 0.75rem;
+          border:none !important;
+          width: 95% !important;
+        }
+        .input-password:focus{
+          outline: none;
+        }
+      }
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 765px){
+  .register-component{
+    .register-form{
+      width:65vw !important;
+    }
+  }
+}
+@media (max-width:600px){
+   .register-component{
+    .register-form{
+      width:90vw !important;
+    }
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.css-1ltvnu9 {
+  opacity: 1 !important;
+  border-color:white !important;
 }
